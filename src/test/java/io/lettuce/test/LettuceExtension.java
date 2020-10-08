@@ -151,7 +151,7 @@ public class LettuceExtension implements ParameterResolver, AfterAllCallback, Af
                 CloseAfterTest closeables = store.getOrComputeIfAbsent(CloseAfterTest.class, it -> new CloseAfterTest(),
                         CloseAfterTest.class);
 
-                closeables.add(closeables);
+                closeables.add(instance);
             }
 
             return instance;

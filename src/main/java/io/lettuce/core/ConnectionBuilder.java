@@ -30,7 +30,6 @@ import io.netty.channel.Channel;
 import io.netty.channel.ChannelHandler;
 import io.netty.channel.ChannelInitializer;
 import io.netty.channel.group.ChannelGroup;
-import io.netty.util.Timer;
 
 /**
  * Connection builder for connections. This class is part of the internal API.

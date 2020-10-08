@@ -151,14 +151,15 @@ public class CreateReactiveApi {
     private String getResultType(MethodDeclaration method,
             ClassOrInterfaceDeclaration classOfMethod) {
 
-        if(RESULT_SPEC.containsKey(method.getName())){
-            return RESULT_SPEC.get(method.getName());
+        String name = RESULT_SPEC.get(method.getName());
+        if(name != null){
+            return name;
         }
 
         String key = classOfMethod.getName() + "." + method.getName();
-
-        if(RESULT_SPEC.containsKey(key)){
-            return RESULT_SPEC.get(key);
+        String type = RESULT_SPEC.get(key);
+        if(type != null){
+            return type;
         }
 
         return null;
